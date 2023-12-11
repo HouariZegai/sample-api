@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  sample-api:
+    image: sample-api:latest
+    container_name: sample-api
+    networks:
+      - backend
+    ports:
+      - "8081:8081"
+
+networks:
+  backend:
