@@ -9,5 +9,5 @@ RUN mvn clean install
 FROM openjdk:17-alpine
 WORKDIR /app
 COPY --from=build /app/target/backend-fat.jar ./backend.jar
-EXPOSE 8081
+#EXPOSE 8081
 CMD ["java", "-jar", "backend.jar"]
