@@ -1,19 +1,19 @@
-# Sample REST API
-This is a sample REST API project using Spring Boot.
+# Sample HTTPS Secured REST API
+This is a sample REST API that is secured using HTTPS. It is built using Spring Boot.
 
 ## Getting Started
 
-### Build Project
+## Create Docker Network
 ```shell
-mvn clean package
+docker network create --drive bridge --subnet 122.122.122.0/24 backend
 ```
 
-### Create Docker Image
+### Run Nginx Proxy Manager Container
 ```shell
-docker build -t sample-api .
+docker-compose -f docker-compose-nginx.yml up -d
 ```
 
-### Run Docker Containers
+### Create Docker Image & Run Docker Container
 ```shell
 docker-compose up -d
 ```
